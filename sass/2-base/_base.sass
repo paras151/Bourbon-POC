@@ -1,2 +1,15 @@
 body
     font-family: $font-stack-helvetica
+
+.box
+    +size(100px)
+    background-color: tint(red, 45%)
+    margin: .5em
+    float: left
+
+.box:before
+            @include triangle("up", 2rem, 1rem, lightgreen)
+            content:""
+
+.boxes
+      +clearfix
